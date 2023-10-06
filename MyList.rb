@@ -4,3 +4,9 @@ class MyList
     end
   end
   
+  def each
+    @list.each do |element|
+      yield(element)
+    end
+  end
+end
