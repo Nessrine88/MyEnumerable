@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
- <h1><b> Welcome To My Our Ruby Project! </b></h1>
+ <h1><b> Welcome To Our Ruby Project! </b></h1>
 </div>  
 
 <br/>
@@ -12,7 +12,7 @@
 <br/>
 
 <div align="center">
-  <h1 style="border-bottom: none;"> ⚓ 🏴‍☠️ My Enumerable 🏴‍☠ ⚓ </h1>
+  <h1 style="border-bottom: none;">   🧮 My Enumerable 🧮  </h1>
 </div>
 
 <br/>
@@ -43,16 +43,16 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 🏴‍☠️ Decode Morse Code 🏴‍☠️ <a name="about-project"></a>
+# 🧮  My Enumerable 🧮  <a name="about-project"></a>
 
-In this project, we built our first project in Ruby programming language where to decode a morse message into English words
+In this project, we implemented a subset of Ruby's Enumerable methods. The aim is to understand how Ruby's Enumerable methods work behind the scenes.
 
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-This project primarily uses SQL for database management.
+This project primarily uses ruby's methods and modules.
 
 <details>
 <summary>Programming Language</summary>
@@ -65,10 +65,10 @@ This project primarily uses SQL for database management.
 
 ### Key Features <a name="key-features"></a>
 
-- **Character Decoding**: Ability to decode individual Morse code characters to their corresponding English alphabets.
-- **Word Decoding**: Decode entire words from Morse code to English.
-- **Message Decoding**: Decode full messages encoded in Morse code into readable English text.
-- **Modular Design**: Built with reusability in mind to easily incorporate into other Ruby projects.
+- **All Elements**: Utilize the `#all?` method to check if all elements in the list meet a certain condition.
+- **Any Element**: Use the `#any?` method to find out if at least one element in the list satisfies a given condition.
+- **Filter Elements**: Use the `#filter` method to create a new array containing elements that meet a certain condition.
+- **Modular Design**: Built with reusability in mind, the `MyEnumerable` module can easily be included in other Ruby projects.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +91,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```bash
-  git clone https://github.com/CVILLA09/decode-morse-code.git
+  git clone git@github.com:Nessrine88/MyEnumerable.git
 ```
 
 ### Install
@@ -99,24 +99,47 @@ Clone this repository to your desired folder:
 Go to the project directory.
 
 ```bash
-  cd decode-morse-code
+  cd MyEnumerable
 ```
 
 ### Usage
 
-In the project directory, inside the decode_morse_code.rb file. Call the decode_message method with your morse message as follows:
+To use the `MyEnumerable` methods in your Ruby project, follow these steps:
+
+1. Start an Interactive Ruby (IRB) session in your terminal by running `irb`.
 
 ```bash
-  message = decode_message(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
-puts message
+    irb
+  load './MyList.rb'
+  load './MyEnumerable.rb'
 ```
+
+- Create a new MyList object.
+
+```bash
+  list = MyList.new(1, 2, 3, 4)
+```
+
 
 ### Run tests
 
 To run tests:
 
-```test
-No tests here...
+
+- Now you can use the implemented methods. Here are some examples:
+
+```bash
+   # Test #all?
+  list.all? {|e| e < 5}  # Should return true
+  list.all? {|e| e > 5}  # Should return false
+
+  # Test #any?
+  list.any? {|e| e == 2}  # Should return true
+  list.any? {|e| e == 5}  # Should return false
+
+  # Test #filter
+  list.filter {|e| e.even?}  # Should return [2, 4]
+
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -150,8 +173,10 @@ No tests here...
 
 Features to be added in upcoming iterations.
 
-- **Implement UI**: Improve UI to make it easier for anyone to decode morse code.
-- **Additional decoding**: Add additional decoding options to address different codes.
+- **Additional Enumerable Methods**: Extend the `MyEnumerable` module to include more methods like `#max`, `#min`, and `#sort`.
+- **Performance Optimization**: Improve the efficiency of existing methods.
+- **User Interface**: Possibly develop a CLI or web-based interface to interact with the `MyList` objects and test enumerable methods.
+- **Comprehensive Testing**: Add a robust testing suite to ensure reliability and edge case handling.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

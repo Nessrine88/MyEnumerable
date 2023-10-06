@@ -10,4 +10,4 @@ class MyList
       yield(element)
     end
   end
-end
+
